@@ -1,11 +1,19 @@
-// Footer.jsx
+// components/Footer.jsx
+import { route } from 'preact-router';
 
 export function Footer() {
+  const handleContactClick = () => {
+    route('/contact'); // Navigate to contact page
+  };
+
   return (
     <footer className="bg-slate-300 w-full py-12 flex flex-col items-center justify-center text-white">
       <div className="text-4xl font-bold mb-6">Stay Connected with Us</div>
       <div className="flex gap-8 mb-6">
-        <button className="px-8 py-3 bg-blue-500 rounded-full hover:bg-blue-600 text-white text-xl transition-all">
+        <button
+          onClick={handleContactClick}
+          className="px-8 py-3 bg-blue-500 rounded-full hover:bg-blue-600 text-white text-xl transition-all"
+        >
           Contact Us
         </button>
         <button className="px-8 py-3 bg-green-500 rounded-full hover:bg-green-600 text-white text-xl transition-all">
